@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
   logger.info('GET at "/"');
   logger.info('Full headers:', req.headers);
   logger.info('Full body:', req.body);
-  res.json({msg:"hello world"});
+  res.json({msg:"hello world from mybranch"});
 });
 
 var port = process.env["PORT"];
