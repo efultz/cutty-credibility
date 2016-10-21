@@ -17,7 +17,10 @@ app.get('/', function(req, res) {
   res.json({msg:"hello world"});
 });
 
-var port = 6000;
+var port = process.env["PORT"];
+if( ! port ) {
+  port = 6000;
+}
 app.listen(port, function(){
   logger.info('full env', process.env);
   logger.info('app started listening on port '+port);
